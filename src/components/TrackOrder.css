@@ -1,0 +1,365 @@
+/* ==============================================
+   TrackOrder.css — Shipment Tracking Page
+   ============================================== */
+
+.track-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-width: 860px;
+  margin: 0 auto;
+  animation: fadeInUp 0.4s ease;
+}
+
+/* Search Card */
+.track-search-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.track-search-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.track-search-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.track-search-sub {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.track-input-form {
+  display: flex;
+  gap: var(--space-md);
+  max-width: 600px;
+  margin: 0 auto var(--space-lg);
+}
+
+.track-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.track-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.track-input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  outline: none;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+
+.track-input:focus {
+  border-color: var(--color-violet);
+  box-shadow: 0 0 0 3px var(--color-violet-xlight);
+  background: var(--bg-card);
+}
+
+.track-btn {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Quick Dockets */
+.track-quick-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.track-docket-chip {
+  background: var(--color-violet-xlight);
+  color: var(--color-violet);
+  border: 1px solid rgba(124,58,237,0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.track-docket-chip:hover {
+  background: rgba(124,58,237,0.18);
+  transform: translateY(-1px);
+}
+
+/* Result Overview Card */
+.track-result-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  animation: fadeInUp 0.4s ease;
+}
+
+.track-result-header {
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, rgba(124,58,237,0.06), rgba(167,139,250,0.08));
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.track-docket-badge-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.track-docket-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-violet);
+  letter-spacing: 0.04em;
+}
+
+.track-route-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.track-route-city {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-route-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.track-route-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.track-route-arrow {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 2px;
+  background: var(--border-color);
+  margin: 0 var(--space-md);
+}
+
+.track-route-arrow::after {
+  content: '✈';
+  position: absolute;
+  color: var(--color-violet);
+  background: var(--bg-secondary);
+  padding: 0 6px;
+  font-size: 1.1rem;
+}
+
+/* Details Grid */
+.track-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.track-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.track-detail-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.track-detail-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Timeline */
+.track-timeline-container {
+  padding: var(--space-xl);
+}
+
+.track-timeline-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xl);
+}
+
+.track-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 36px;
+}
+
+.track-timeline-step {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+.track-timeline-step:last-child {
+  padding-bottom: 0;
+}
+
+/* Connecting Line */
+.track-timeline-step::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.track-timeline-step.completed::before {
+  background: var(--color-emerald);
+}
+
+.track-timeline-step:last-child::before {
+  display: none;
+}
+
+/* Step Node */
+.track-step-node {
+  position: absolute;
+  left: -33px;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: white;
+  transition: all var(--transition-fast);
+}
+
+.track-timeline-step.completed .track-step-node {
+  background: var(--color-emerald);
+  border-color: var(--color-emerald);
+}
+
+.track-timeline-step.current .track-step-node {
+  background: var(--color-violet);
+  border-color: var(--color-violet);
+  box-shadow: 0 0 0 4px var(--color-violet-xlight);
+  animation: pulse 1.8s infinite;
+}
+
+.track-step-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.track-step-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.track-step-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.track-step-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.track-step-time {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .track-search-card {
+    padding: var(--space-lg);
+  }
+
+  .track-input-form {
+    flex-direction: column;
+  }
+
+  .track-btn {
+    width: 100%;
+  }
+
+  .track-route-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .track-route-arrow {
+    display: none;
+  }
+
+  .track-step-content {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

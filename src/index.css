@@ -1,0 +1,143 @@
+/* ===================================================
+   index.css — CSS Reset + Root Design Tokens
+   CargoFlow | Light Lavender + Violet Theme
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ---------- CSS Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img, video { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, textarea, select { font-family: inherit; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; font-weight: 700; }
+
+/* ---------- Root Design Tokens ---------- */
+:root {
+  /* Core Palette */
+  --color-violet:        #7C3AED;
+  --color-violet-mid:    #6D28D9;
+  --color-violet-light:  #A78BFA;
+  --color-violet-xlight: #EDE9FD;
+  --color-violet-pale:   #F5F3FF;
+  --color-indigo-deep:   #1E1B4B;
+
+  /* Backgrounds */
+  --bg-primary:   #EEE9FD;
+  --bg-secondary: #F5F3FF;
+  --bg-card:      #FFFFFF;
+  --bg-card-alt:  #FAFAFA;
+  --bg-violet-tint: rgba(124, 58, 237, 0.06);
+
+  /* Text */
+  --text-primary:   #1E1B4B;
+  --text-secondary: #4B5563;
+  --text-muted:     #9CA3AF;
+  --text-accent:    #7C3AED;
+  --text-white:     #FFFFFF;
+
+  /* Borders */
+  --border-color:   rgba(124, 58, 237, 0.12);
+  --border-light:   rgba(124, 58, 237, 0.06);
+  --border-focus:   #7C3AED;
+
+  /* Shadows */
+  --shadow-xs:  0 1px 3px rgba(124, 58, 237, 0.06);
+  --shadow-sm:  0 2px 8px rgba(124, 58, 237, 0.08);
+  --shadow-md:  0 4px 20px rgba(124, 58, 237, 0.12);
+  --shadow-lg:  0 8px 40px rgba(124, 58, 237, 0.15);
+  --shadow-xl:  0 16px 60px rgba(124, 58, 237, 0.18);
+  --shadow-glow: 0 0 24px rgba(124, 58, 237, 0.3);
+
+  /* Radii */
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   18px;
+  --radius-xl:   24px;
+  --radius-2xl:  32px;
+  --radius-full: 9999px;
+
+  /* Spacing */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Navbar */
+  --navbar-height: 70px;
+}
+
+/* ---------- Sidebar Dimensions ---------- */
+:root {
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 68px;
+}
+
+/* ---------- Dark Mode Overrides ---------- */
+.dark-mode {
+  --bg-primary:    #0F0D1A;
+  --bg-secondary:  #16132A;
+  --bg-card:       #1C1830;
+  --bg-card-alt:   #201C35;
+  --bg-violet-tint: rgba(124,58,237,0.12);
+  --text-primary:  #F1EFFF;
+  --text-secondary:#B8B2D8;
+  --text-muted:    #7B729C;
+  --border-color:  rgba(124,58,237,0.18);
+  --border-light:  rgba(124,58,237,0.09);
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.5);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.6);
+  --shadow-xl: 0 16px 60px rgba(0,0,0,0.7);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-violet-light);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-violet); }
+
+/* ---------- Selection ---------- */
+::selection {
+  background: rgba(124, 58, 237, 0.2);
+  color: var(--color-indigo-deep);
+}
